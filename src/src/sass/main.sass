@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import 'core'
+@import 'animation'
+@import 'modules/footer'
+//@import url(https://fonts.googleapis.com/css?family=Lora:400,700)
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond)
+
+html, body
+  height: 100%
+  font-family: "EB Garamond", "游明朝", "Yu Mincho", YuMincho, serif;
+  color: $color-black
+
+a
+  color: $color-black
+
+*
+  margin: 0
+  padding: 0
+
+
+.pageContainer
+  width: 640px
+  position: relative
+  margin: 0 auto
+  z-index: 100
+
+
+// Header Setting ---
+.header
+  padding-top: 45px
+
+.header_logo
+  +fs(2.2)
+  font-weight: bold
+  display: block
+  width: 180px
+  margin: 0 auto 50px
+  text-align: center
+  letter-spacing: 6px
+
+.headerNav
+  margin: 0 auto
+  display: block
+  text-align: center
+  +fs(1.8)
+
+  .headerNav_item
+    display: inline-block
+    margin: 0 6%
+
+    &.inactive
+      color: $color-gray
+
+// Background ----
+// .backgroundCanvas
+//   position: fixed
+//   width: 100%
+//   height: 100%
+//   top: 0
+//   left: 0
+//   z-index: 0
+
+
+// Entries ----
+.entriesList
+  min-height: 800px
+
+.entriesList_title
+  display: inline-block
+  margin-bottom: 10px
+  +fs(1.8)
+  font-weight: bold
+
+.entriesList_date
+  margin-bottom: 10px
+  +fs(1.4)
+
+.entriesList_content
+  padding-bottom: 40px
+  +fs(1.6)
+
+
+// About ----
+.aboutName
+  +fs(1.6)
+  margin-bottom: 20px
+
+.aboutProfile
+  +fs(1.6)
+  margin-bottom: 40px
+
+
+// Works ----
+.worksList
+  .worksList_item
+    margin-bottom: 60px
+    +fs(1.6)
+
+    .worksList_item_title
+      margin: 4px 0
+      +fs(1.8)
+
+
+// Work Detail ----
+.workDetail
+  margin-bottom: 50px
+  +fs(1.6)
+
+  .workDetail_header_image
+    width: 640px
+
+  .workDetail_title
+    margin: 4px 0
+    +fs(1.8)
+
+  .workDetail_paragraph
+    margin-top: 10px
+
+  .workDetail_description_en
+    margin-top: 40px
+
+  .workDetail_description_jp
+    margin-top: 40px
+
+  .workDetail_images, .workDetail_imagesSub
+    margin: 20px 0 40px
+    text-align: center
+
+    img
+      width: 100%
+      margin: 40px auto 0
+
+    iframe
+      width: 100%
+      margin: 20px auto 0

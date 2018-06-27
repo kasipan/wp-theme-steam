@@ -1,0 +1,115 @@
+=fs($sizeValue: 1.6)
+  //font-size: ($sizeValue * 10) + px
+  font-size: $sizeValue + rem
+
+=btn-base($width, $height, $line-height)
+  width: $width
+  height: $height
+  line-height: $line-height
+
+=transition($prop, $duration, $animation, $delay)
+  transition-property: $prop
+  transition-duration: $duration
+  transition-timing-function: $animation
+  transition-delay: $delay
+  -webkit-transition-property: $prop
+  -webkit-transition-duration: $duration
+  -webkit-transition-timing-function: $animation
+  -webkit-transition-delay: $delay
+
+=translate($x, $y)
+  transform: translate($x, $y)
+  -webkit-transform: translate($x, $y)
+
+=animation($name, $duration:1s, $anim:ease, $iteration:1, $direction:normal, $fillmode:none)
+  animation-name: $name
+  animation-duration: $duration
+  animation-timing-function: $anim
+  animation-iteration-count: $iteration
+  animation-direction: $direction
+  animation-fill-mode: $fillmode
+  -webkit-animation-name: $name
+  -webkit-animation-duration: $duration
+  -webkit-animation-timing-function: $anim
+  -webkit-animation-iteration-count: $iteration
+  -webkit-animation-direction: $direction
+  -webkit-animation-fill-mode: $fillmode
+
+
+=box-shadow($x, $y, $blur, $opacity)
+  -webkit-box-shadow: $x $y $blur rgba(0,0,0,$opacity)
+  box-shadow: $x $y $blur rgba(0,0,0,$opacity)
+=box-shadow-simple($x, $y, $color)
+  -webkit-box-shadow: $x $y $color
+  box-shadow: $x $y $color
+  
+=box-shadow-expand($x, $y, $blur, $expand, $opacity)
+  -webkit-box-shadow: $x $y $blur $expand rgba(0,0,0,$opacity)
+  box-shadow: $x $y $blur $expand rgba(0,0,0,$opacity)
+
+=custom-box-shadow($x, $y, $blur, $expand, $color)
+  -webkit-box-shadow: $x $y $blur $expand $color
+  box-shadow: $x $y $blur $expand $color
+
+=inner-shadow($x, $y, $blur, $opacity)
+  -webkit-box-shadow: $x $y $blur rgba(0,0,0,$opacity) inset
+  box-shadow: $x $y $blur rgba(0,0,0,$opacity) inset
+
+=custom-inner-shadow($x, $y, $blur, $color)
+  -webkit-box-shadow: $x $y $blur $color inset
+  box-shadow: $x $y $blur $color inset
+
+=text-inner-shadow($x, $y, $blur, $color)
+  -webkit-text-shadow: $x $y $blur $color inset
+  text-shadow: $x $y $blur $color inset
+
+
+=bg-gradient($direction, $top, $bottom)
+  background-image: -webkit-linear-gradient($direction, $top, $bottom)
+  background-image: linear-gradient($direction, $top, $bottom)
+
+=custom-bg-gradient($direction, $top, $middle, $bottom)
+  background-image: -webkit-linear-gradient($direction, $top, $bottom)
+  background-image: linear-gradient($direction, $top, $bottom)
+
+=radius($prop)
+  -webkit-border-radius: $prop
+  border-radius: $prop
+
+=custom-radius($tl, $tr, $br, $bl)
+  -webkit-border-radius: $tl $tr $br $bl
+  border-radius: $tl $tr $br $bl
+
+
+=sizing($prop)
+  -webkit-box-sizing: $prop
+  box-sizing: $prop
+
+=rotate($prop)
+  -webkit-transform: rotate($prop)
+  transform: rotate($prop)
+
+=scale($prop)
+  -webkit-transform: scale($prop)
+  transform: scale($prop)
+
+=ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+
+
+=box-shadow_and_border($px:$default-border-pixel,$style:$default-border-style,$color:$default-border-color,$shadow-color:$color-c,$x:0,$y:0,$blur:5px,$border-radius:5px)
+  border: $px $style $color
+  box-shadow: $x $y $blur $shadow-color
+  border-radius: $border-radius
+
+=opacity($value)
+  $opacityIE: 100 - $value * 100
+  opacity: $value
+  filter: alpha(opacity=$opacityIE)
+  -ms-filter: "alpha(opacity=#{$opacityIE})"
+  -moz-opacity: $value
+  -khtml-opacity: $value
+
+
